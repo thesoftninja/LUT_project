@@ -74,6 +74,8 @@ img {
     height: 850px;
     width: 60%;
     margin: auto;
+    gap: 40px;
+    margin-bottom: 150px;
 }
 
 
@@ -88,19 +90,90 @@ img {
 
 .img {
     border-radius: 40%;
-    filter: grayscale(60%) contrast(1.1) brightness(1.0);
+    filter: grayscale(50%) contrast(1.1) brightness(1.0);
     background-color: var(--light-color);
     background: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.7));
     border: none !important;
     overflow: hidden;
     position: relative;
+    min-width: 350px;
 }
 
 
 
 .scroll-down {
     text-align: center;
-    margin-top: 50px;
+
+}
+
+/* My Expertise Section */
+
+.my-expertise .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 450px;
+    width: 60%;
+    margin: auto;
+    margin-top: 250px;
+    margin-bottom: 250px;
+
+}
+
+.my-expertise .heading {
+    margin-bottom: 120px;
+}
+
+.my-expertise .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 140px;
+}
+
+
+.my-expertise .card {
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    padding: 40px;
+    border-radius: 45px;
+    max-width: 550px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    width: 100%;
+    min-width: 350px;
+}
+
+.box1, .box2, .box3 {
+    position: relative;
+}
+
+.box1::after, .box2::after, .box3::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+}
+
+
+.box1::after {
+    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+}
+
+.box2::after {
+    background: linear-gradient(71deg, #0d1212, #EA32DC, #0d1212);
+}
+
+.box3::after {
+    background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+}
+
+.my-expertise .card .text {
+    text-align: left;
 }
 
 
@@ -188,6 +261,7 @@ img {
 }
 
 .text-italic {
+    font-size: 1.4rem;
     font-style: italic;
     padding-bottom: 20px;
 }
