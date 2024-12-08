@@ -1,3 +1,5 @@
+/* General - About Me */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,7 +35,7 @@ img {
     max-width: 100%;
 }
 
-/* Navbar */
+/* Navbar - About Me*/
 
 .navbar {
     background: #121212;
@@ -61,133 +63,47 @@ img {
     width: 50px;
 }
 
-/* Hero Section */
 
-.hero {
-    margin-bottom: 50px;
-}
+/* Blog Article - Blog */
 
-.hero .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 850px;
-    width: 60%;
-    margin: auto;
-    gap: 40px;
-    margin-bottom: 150px;
-}
-
-
-.hero .hero-image {
-    margin-right: 30px;
-}
-
-.hero .hero-text {
-    width: 70%;
-    margin-bottom: 20px;
-}
-
-.img {
-    border-radius: 20%;
-    filter: grayscale(40%) contrast(1.0) brightness(0.9);
-    background-color: var(--light-color);
-    background: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.7));
-    border: none !important;
-    overflow: hidden;
-    position: relative;
-    min-width: 500px;
-}
-
-.img-abt-me {
-    border-radius: 20%;
-    filter: grayscale(40%) contrast(1.0) brightness(0.9);
-    background-color: var(--light-color);
-    background: radial-gradient(circle at center, transparent, rgba(11, 246, 246, 0.9));
-    border: 2px solid rgba(11, 246, 246, 0.9);
-    overflow: hidden;
-    position: relative;
-    min-width: 350px;
-} 
-
-
-
-.scroll-down {
-    text-align: center;
-
-}
-
-/* My Expertise Section */
-
-.my-expertise .container {
+.blog-article .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 450px;
-    width: 60%;
-    margin: auto;
-    margin-top: 500px;
-    margin-bottom: 250px;
-
-}
-
-.my-expertise .heading {
-    margin-bottom: 120px;
-}
-
-.my-expertise .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 140px;
-}
-
-
-.my-expertise .card {
-    background: linear-gradient(71deg, #080509, #1a171c, #080509);
-    padding: 40px;
-    border-radius: 45px;
-    max-width: 550px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
     width: 100%;
-    min-width: 350px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 35px; /* Ensures spacing inside container */
+    box-sizing: border-box;
 }
 
-.box1, .box2, .box3 {
-    position: relative;
+.blog-article .heading {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    margin: 0 auto 60px; /* Add horizontal auto margin for centering */
+    padding: 0; /* Ensure no extra padding */
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
 
-.box1::after, .box2::after, .box3::after {
-    position: absolute;
-    top: -1px;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
-    content: "";
-    z-index: -1;
-    border-radius: 45px;
+.blog-article .card {
+    margin-top: 80px;
 }
 
 
-.box1::after {
-    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+.box1 {
+    max-width: 600px; /* Limit the size */
+    width: 100%; /* Ensures it scales responsively */
+    margin: 0 auto; /* Centers the div */
+    padding: 20px; /* Optional: Add internal spacing */
+    box-sizing: border-box; /* Ensures padding is included within max-width */
 }
 
-.box2::after {
-    background: linear-gradient(71deg, #0d1212, #EA32DC, #0d1212);
-}
 
-.box3::after {
-    background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
-}
-
-.my-expertise .card .text {
-    text-align: left;
-}
-
-/* Footer */
+/* Footer - About Me */
 
 .footer {
     padding: 40px 0;
@@ -236,7 +152,7 @@ img {
 }
 
 
-/* Utility Classes */
+/* Utility Classes - About Me */
 
 .container {
     max-width: 1100px;
@@ -251,7 +167,7 @@ img {
 }
 
 
-/* Buttons */
+/* Buttons - About Me */
 
 .btn {
     display: inline-block;
@@ -288,14 +204,21 @@ img {
 
 
 
-/* Text Classes */
+/* Text Classes - About Me */
 
-.text-xxl, .text-xl, .text-lg, .text-md, .text-sm, .text-italic {
+.text-xxl, .text-xl, .text-lg, .text-md, .text-sm, .text-italic, .text-abt-me {
     color: var(--light-color);
 }
 
 .text-xxl {
     font-size: 6rem;
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 40px 0 20px;
+}
+
+.text-abt-me {
+    font-size: 4rem;
     line-height: 1.2;
     font-weight: 300;
     margin: 40px 0 20px;
@@ -339,7 +262,7 @@ img {
     padding-bottom: 20px;
 }
 
-/* Hamburger Button */
+/* Hamburger Button - About Me */
 
 .hamburger-button {
     display: none;
@@ -357,7 +280,7 @@ img {
     margin: 6px 0;
 }
 
-/* Mobile Menu */
+/* Mobile Menu - About Me */
 
 .mobile-menu {
     position: fixed;
@@ -390,41 +313,17 @@ img {
 }
 
 
-/* Media Queries */
-
-@media (max-width: 1700px) {
-    .hero .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align the items */
-        gap: 20px; /* Adjust gap between items */
-        text-align: center; /* Center text */
-    }
-
-    .hero .hero-text {
-        order: 1; /* Place text above the image */
-        width: 100%; /* Full width for text */
-    }
-
-    .hero .hero-image {
-        order: 2; /* Place image below the text */
-        margin-right: 0; /* Remove margin for centering */
-        min-width: 300px; /* Adjust width for smaller screens */
-    }
-
-    .text-xxl {
-        font-size: 4rem;
-    }
-}
-
-@media (max-width: 1200px) {
-    .text-xxl {
-        font-size: 3.5rem;
-    }
-}
+/* Media Queries - About Me */
 
 @media (max-width: 960px) {
     .text-xxl {
         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-story .grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
     }
 }
 
@@ -438,13 +337,10 @@ img {
     }
 
     .hero .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero .hero-image {
-        padding: 0 10px;
+        background: url(../LUT_coursework/Images/hero-bg-mobile.png) no-repeat;
+        background-size: 350px 400px;
+        background-position: bottom;
+        height: 770px;
     }
 
     .hero .hero-content,  .hero .hero-text  {
@@ -458,12 +354,12 @@ img {
         width: 100%;
     }
 
-    .my-expertise .heading {
+    .testimonials .testimonials-heading {
         max-width: 100%;
         text-align: center;
     }
 
-    .my-expertise .my-expertise, .footer .footer-grid {
+    .testimonials .testimonials-grid, .pricing .pricing-grid, .footer .footer-grid {
         grid-template-columns: 1fr;
     }
 
@@ -475,7 +371,7 @@ img {
         text-align: center;
     }
 
-    /* Text */
+    /* Text - About Me */
 
     .text-xl {
         font-size: 1.9rem;
