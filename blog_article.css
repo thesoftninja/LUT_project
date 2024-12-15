@@ -75,7 +75,7 @@ img {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 35px; /* Ensures spacing inside container */
+    padding: 0 35px; 
     box-sizing: border-box;
 }
 
@@ -83,8 +83,8 @@ img {
     word-wrap: break-word;
     overflow-wrap: break-word;
     text-align: center;
-    margin: 0 auto 60px; /* Add horizontal auto margin for centering */
-    padding: 0; /* Ensure no extra padding */
+    margin: 0 auto 60px; 
+    padding: 0; 
     margin-top: 50px;
     margin-bottom: 60px;
 }
@@ -95,11 +95,11 @@ img {
 
 
 .box1 {
-    max-width: 600px; /* Limit the size */
-    width: 100%; /* Ensures it scales responsively */
-    margin: 0 auto; /* Centers the div */
-    padding: 20px; /* Optional: Add internal spacing */
-    box-sizing: border-box; /* Ensures padding is included within max-width */
+    max-width: 600px; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 

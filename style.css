@@ -81,6 +81,7 @@ img {
 
 .hero .hero-image {
     margin-right: 30px;
+    min-width: 500px;
 }
 
 .hero .hero-text {
@@ -96,7 +97,7 @@ img {
     border: none !important;
     overflow: hidden;
     position: relative;
-    min-width: 500px;
+
 }
 
 .img-abt-me {
@@ -348,13 +349,19 @@ img {
     cursor: pointer;
     padding: 10px;
     z-index: 1000;
+
 }
 
 .hamburger-button .hamburger-line {
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: #fff !important;
     margin: 6px 0;
+    transition: background-color 0.3 ease;
+}
+
+.hamburger-button .hamburger-line.line-active {
+    background: black !important; /* Color when active */
 }
 
 /* Mobile Menu */
@@ -382,11 +389,13 @@ img {
 
 .mobile-menu ul li {
     margin: 10px 0;
+
 }
 
 .mobile-menu ul li a {
     font-size: 20px;
     transition: 0.3s;
+    color: #080509;
 }
 
 
@@ -394,22 +403,17 @@ img {
 
 @media (max-width: 1700px) {
     .hero .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align the items */
-        gap: 20px; /* Adjust gap between items */
-        text-align: center; /* Center text */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        text-align: center; 
     }
 
     .hero .hero-text {
-        order: 1; /* Place text above the image */
-        width: 100%; /* Full width for text */
+        order: 1; 
+        width: 100%; 
     }
 
-    .hero .hero-image {
-        order: 2; /* Place image below the text */
-        margin-right: 0; /* Remove margin for centering */
-        min-width: 300px; /* Adjust width for smaller screens */
-    }
 
     .text-xxl {
         font-size: 4rem;
@@ -420,12 +424,62 @@ img {
     .text-xxl {
         font-size: 3.5rem;
     }
+
+    .hero .scroll-down {
+        display: none;
+    }
+
+    .hero {
+        padding-bottom: 40px;
+    }
+
+    .my-expertise .expertise-grid {
+        grid-template-columns: 2fr;
+        gap: 30px;
+        margin-bottom: 250px;
+    }
+
+
+
+
 }
 
 @media (max-width: 960px) {
     .text-xxl {
         font-size: 2.5rem;
     }
+
+    .hero .scroll-down {
+        display: none;
+    }
+
+    .hero {
+        padding-bottom: 30px;
+    }
+
+    .my-expertise .expertise-grid {
+        grid-template-columns: 2fr;
+        gap: 30px;
+        margin-bottom: 250px;
+    }
+
+
+    .my-expertise .my-expertise, .footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .my-expertise .my-expertise, .footer .footer-grid .subscribe-form {
+        max-width: 200px;
+    }
+
+    .footer .card {
+        margin-right: 0;
+    }
+
+    .footer .footer-grid > div {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 670px) {
@@ -437,15 +491,24 @@ img {
         display: block;
     }
 
+    .hero {
+        padding-bottom: 10px;
+    }
+
     .hero .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
     }
 
     .hero .hero-image {
-        padding: 0 10px;
+        display: block;
+        margin: 10px auto;
+        width: auto;
+        max-width: 95%;
+        min-width: unset;
     }
+
 
     .hero .hero-content,  .hero .hero-text  {
         width: 100%;
@@ -458,9 +521,20 @@ img {
         width: 100%;
     }
 
+
+
+
     .my-expertise .heading {
         max-width: 100%;
         text-align: center;
+        margin: 30px;
+    }
+
+
+    .my-expertise .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
     }
 
     .my-expertise .my-expertise, .footer .footer-grid {

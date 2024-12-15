@@ -1,33 +1,43 @@
 
+window.addEventListener('resize', moveHeroImage);
+
 // Mobile Menu
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerButton = document.querySelector('.hamburger-button');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const hamburgerButtonLine = document.querySelectorAll('.hamburger-line');
 
-    hamburgerButton.addEventListener('click', () => mobileMenu.classList.toggle('active'));
-})
-
-let tl = gsap.timeline ({
-
-})
-
-
-// Lenis Smooth Scroll
-
-    // Initialize Lenis
-    const lenis = new Lenis();
-
-    // Listen for the scroll event and log the event data
-    lenis.on('scroll', (e) => {
-    console.log(e);
+    hamburgerButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        
+        // Toggle 'line-active' only on click
+        hamburgerButtonLine.forEach(line => {
+            line.classList.toggle('line-active');
+        });
     });
+});
 
-    // Use requestAnimationFrame to continuously update the scroll
-    function raf(time) {
-     lenis.raf(time);
-     requestAnimationFrame(raf);
+
+
+
+
+function moveHeroImage () {
+    const heroHeading = document.querySelector('.hero .hero-heading');
+    const heroImage = document.querySelector('.hero .hero-image');
+    const heroContent = document.querySelector('.hero-content');
+
+    if (window.innerWidth <= 670) {
+        heroHeading.insertAdjacentElement('afterend', heroImage);
+    } else {
+        heroContent.insertAdjacentElement('afterend', heroImage)
     }
+}
+
+moveHeroImage();
+
+
+
 
 
 

@@ -73,16 +73,14 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 450px;
     width: 60%;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 150px;
     margin-bottom: 250px;
-
 }
 
 .help .heading {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .help .help-grid {
@@ -100,7 +98,8 @@ img {
     border: 2px solid transparent;
     background-clip: padding-box;
     width: 100%;
-    min-width: 350px;
+    min-width: 300px; 
+    min-height: 600px;
 }
 
 .box1, .box2, .box3 {
@@ -309,11 +308,16 @@ img {
 .hamburger-button .hamburger-line {
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: #fff !important;
     margin: 6px 0;
+    transition: background-color 0.3 ease;
 }
 
-/* Mobile Menu - About Me */
+.hamburger-button .hamburger-line.line-active {
+    background: black !important; /* Color when active */
+}
+
+/* Mobile Menu - Blog */
 
 .mobile-menu {
     position: fixed;
@@ -343,21 +347,61 @@ img {
 .mobile-menu ul li a {
     font-size: 20px;
     transition: 0.3s;
+    color: #080509;
 }
 
 
-/* Media Queries - About Me */
+
+/* Media Queries */
+
+@media (max-width: 1700px) {
+
+    .text-xxl {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .text-xxl {
+        font-size: 3.5rem;
+    }
+
+    .help .help-grid {
+        grid-template-columns: 2fr;
+        gap: 30px;
+        margin-bottom: 250px;
+    }
+
+}
 
 @media (max-width: 960px) {
     .text-xxl {
         font-size: 2.5rem;
     }
-}
 
-@media (max-width: 768px) {
-    .my-story .grid {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
+    .help .help-grid {
+        grid-template-columns: 2fr;
+        gap: 30px;
+        margin-bottom: 250px;
     }
+
+
+    .help .help, .footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .help .help, .footer .footer-grid .subscribe-form {
+        max-width: 200px;
+    }
+
+    .footer .card {
+        margin-right: 0;
+    }
+
+    .footer .footer-grid > div {
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 670px) {
@@ -369,30 +413,25 @@ img {
         display: block;
     }
 
-    .hero .container {
-        background: url(../LUT_coursework/Images/hero-bg-mobile.png) no-repeat;
-        background-size: 350px 400px;
-        background-position: bottom;
-        height: 770px;
+    .help-container {
+        margin-bottom: 0;
     }
 
-    .hero .hero-content,  .hero .hero-text  {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero .hero-buttons .btn {
-        margin-bottom: 10px;
-        display: block;
-        width: 100%;
-    }
-
-    .testimonials .testimonials-heading {
+    .help .heading {
         max-width: 100%;
         text-align: center;
+        margin: 0;
+        margin-bottom: 40px;;
     }
 
-    .testimonials .testimonials-grid, .pricing .pricing-grid, .footer .footer-grid {
+
+    .help .help-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-bottom: 10px;
+    }
+
+    .help .help, .footer .footer-grid {
         grid-template-columns: 1fr;
     }
 
@@ -404,7 +443,7 @@ img {
         text-align: center;
     }
 
-    /* Text - About Me */
+    /* Text */
 
     .text-xl {
         font-size: 1.9rem;
