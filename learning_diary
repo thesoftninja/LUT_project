@@ -1,0 +1,100 @@
+1.11.2024
+
+TASK: Project 
+
+I started to think about what kind of a project I would like to do and what I would like to add to it, more than what I had already learned. I decided that I will build a portfolio page for myself, though I already had one, but it was made with a site builder, so no coding had been necessary.  
+
+I will of course be building the actual pages too, unlike in the coursework. I would also like to add some GSAP, I might even add a few unnecessary things just in the name of learning. 
+
+Otherwise the coursework website resembles quite a lot the style my previous portfolio web page looked like, I like a quite clean and simple style. 
+
+I would also like to build a contact form that sends the form information to my email, so for that I probably have to figure out some sort of mailing service.
+
+
+
+2.11.2024
+
+TASK: Project 
+
+Starting the actual project, I decided to reuse a bunch of the code I had written in the coursework, but that I would move section by section and change what was needed to make this my portfolio. 
+
+First I built the website in white, but after already building the navbar and hero, I decided that I actually want to make it dark this time. My old portfolio was on white background and while I do think it makes it a bit easier to read and feels a bit more “open”, I still wanted to make it dark this time. 
+
+So, this meant I had to change the fonts to white and fiddle with a good background black, I decided to go with #121212 which is a really dark color, but not completely black.
+
+Before the decision to go dark, I had already fiddled with the hero section for quite a while, since I didn’t want to make it like in the original project, but I did want it to be quite centered with some text on one side and my photo on the other side. I looked at some portfolios on Behance and made some changes and found what kind of works well. 
+
+The hero image was a bit challenging with dark color, as it left a thin white border if I had a white background, even if I tried with border: none or dark. But I found a really cool way to make the background dark, but at the same time not too dark with radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.7));. Super happy how it turned out. 
+
+
+
+3.11.2024
+
+Time to build a car section with a grid, for “my expertise”. This is where I wanted to create something nice looking, so I looked into different card designs and found this one: https://codepen.io/AdityaTiwari/pen/ZExjbwJ that had a nice linear-gradient border effect, so I implemented it. After implementing the necessary code on my cards, I played around with the CSS, to get a bit more handle on what part of the CSS does what. I have a CSS book, which I am reading at the same time, that also helps. 
+
+
+
+Date: 4. - 5.11.2024
+
+
+Activity: Structuring and styling the homepage
+I worked on finalizing the homepage layout. The focus was on creating a clean and engaging hero section and ensuring the "My Expertise" grid looked professional. I struggled with aligning the grid items initially; flexbox seemed easier, but CSS Grid gave better control for this layout. After testing a few card designs, I stuck with a look that had a bid of glow effect with different colors in the borders. 
+
+
+
+Date: 7.-10.11.2024
+Activity: Building the About Me page
+For some reason, the About Me page was more difficult to build, even though it consisted of similar elements to the homepage. I wanted to do something different, and I spent a few days experimenting with various layouts and styles. In the end, I reverted to a structure very similar to the homepage because it looked cleaner and worked better with the overall design. The process was frustrating at times, but it taught me the importance of simplicity and cohesion in design. Though I am not too happy about the end result.
+
+
+
+Date 16.-17.11.2024
+Activity: Building the Blog page
+I made the Blog page just simple with the cards I had already built previously, with the difference that on this page the cards or at least one card had to be clickable, since it would take the user to a blog article page. This was easy though.
+
+
+Date 1.12.2024 - 2.12.2024
+Activity: Building the Blog Article page
+The blog article page needed a clean and focused layout to prioritize readability. I though this was pretty easy, since it was mostly text. 
+
+
+Date 7.12.2024 - 9.12.2024
+Activity: Debugging and implementing the hamburger menu
+
+The hamburger menu was unexpectedly tricky. Getting it to toggle correctly with JavaScript took some trial and error—the logic seemed straightforward, but I kept missing small details in event listeners. On the CSS side, animating the menu's appearance was challenging, especially when making it responsive. I also encountered z-index issues, where the menu kept appearing behind other elements. After debugging and testing thoroughly, it now works smoothly and integrates well into the mobile design.
+
+
+Date: 9.12.2024 - 10.12.2024
+
+Activity: Fine-tuning mobile responsiveness
+
+Revisiting media queries for all pages helped me identify inconsistencies in the design. On smaller screens, the About Me page text felt cramped, and the blog page grid didn’t adapt as cleanly as I wanted. Adjusting padding and margins, along with some trial-and-error testing on real devices, improved the layout significantly. This process reinforced the importance of designing with mobile-first principles in mind.
+
+
+Date: 14.12.2024 - 15.12.2024
+
+Activity: Deployment and testing
+
+After deploying the website on GitHub Pages, I found a few issues with relative paths for images and CSS files. Fixing these involved updating the folder structure and rechecking all file links. I also tested the site’s performance and adjusted image sizes to improve loading times. It was satisfying to see everything come together after deployment, and the project now feels okay, though I have a lot of work in the future to make this page complete. There’s a lot of lorem text + only one blog article page is active, but this is something I can work on in the future as I try to make this a real portfolio to show my skills.
+
+I wanted to add some GSAP, but decided against it as time was running out. However it is in my list of things I want to add in the future before I release the website on my domain. It’s also clear that I am by no means a UX/UI Designer, which is why the site looks to me a bit clunky, but I think the only way to learn is to build a lot of websites and learn tricks. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
